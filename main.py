@@ -46,7 +46,7 @@ def main():
                 sys.exit()
             for b in shots:
                 if b.isColliding(a):
-                    a.kill()
+                    a.split()
                     b.kill()
         for draws in drawable:
             draws.draw(screen)
