@@ -44,6 +44,10 @@ def main():
             if a.isColliding(player):
                 print("Game over!")
                 sys.exit()
+            for b in shots:
+                if b.isColliding(a):
+                    a.kill()
+                    b.kill()
         for draws in drawable:
             draws.draw(screen)
         pygame.display.flip()
